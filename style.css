@@ -1,0 +1,83 @@
+/* Allgemeine Stile für die Webseite */
+body {
+    font-family: "Avenir", sans-serif;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Stile für das Header-Element */
+  header {
+    background-color: #000;
+    padding: 20px;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  nav ul li a:hover {
+    color: #999;
+  }
+  
+  /* Stile für das Hero-Element auf der Startseite */
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .btn {
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 40px;
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #999;
+  }
+  
+  /* Stile für das Footer-Element */
+  footer {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  footer a {
+    color: #fff;
+  }
+  /* CSS-Regeln für die Diashow */
+.slideshow {
+    width: 100%; /* Vollbreite */
+    height: 100vh; /* Vollhöhe des Viewports */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out; /* Übergangseffekt zwischen den Bildern */
+  }
+  
+  

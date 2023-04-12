@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>decaryi</title>
-	<style>
-		body {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-		img {
-			display: inline-block;
-			width: 480px;
-			height: 270px;
-			object-fit: cover;
-			object-position: center center;
-		}
-	</style>
+  <title>Decaryi</title>
+  <style>
+    body {
+      font-family: "Avenir", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+    }
+    .title-image {
+      margin-top: 40px;
+    }
+    .nav-container {
+      margin-top: 20px;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline;
+      margin-right: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+    a:hover {
+      background-color: #eee;
+    }
+  </style>
 </head>
 <body>
-    <a href="https://decaryi.bandcamp.com/">
-        <img src="https://raw.githubusercontent.com/decaryi/decaryi/mains/decaryi_motionlogo_test_02.gif" alt="decaryi_logo" />
-    </a>
+  <div class="container">
+    <div class="title-image">
+      <img src="decaryi.gif" alt="Titelbild">
+    </div>
+    <div class="nav-container">
+      <ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
