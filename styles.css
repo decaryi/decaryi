@@ -22,6 +22,12 @@ body, html {
     height: auto;
     margin-bottom: 0px;
     object-fit: cover;
+    filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu ändern */
+
+  }
+  
+  .image:hover {
+    filter: grayscale(0%); /* Filtereffekt entfernen, um das Bild in Farbe zu ändern */
   }
   
   .link {

@@ -10,10 +10,13 @@ body {
 }
 
 .portfolio img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
+    min-width: 100%; /* Maximale Breite des Containers */
+    max-width: 100%; /* Maximale Breite des Containers */
+
+    overflow: hidden; /* Überlauf ausblenden, falls das Bild breiter ist als der Container */
+    height: auto; /* Höhe automatisch anpassen, um das Bildverhältnis beizubehalten */
+    margin-bottom: 20px; /* Optional: Fügen Sie einen unteren Abstand hinzu, um Platz für andere Inhalte zu schaffen */
+  }  
 
 .portfolio h1 {
     font-size: 48px;
