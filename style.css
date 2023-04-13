@@ -2,18 +2,48 @@ body {
     font-family: "Avenir", sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
+
+
+/* --------------workpage-----------------*/
+
+.containerwork {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .imagecontainerwork {
+    width: 100%; /* Breite des Bildcontainers anpasses */
+    height: 200px; /* HÃ¶he des Bildcontainers anpassen */
+    position: relative;
+    top: 0px; left: 0px;
+    overflow: hidden; /* Ãœberlauf ausblenden */
+  }
+  
+  .imagework {
+    width: 100%; /* Bildbreite auf 100% setzen */
+    height: auto; /* Bildhoehe auf auto setzen */  
+    top: 100; /* Abstand von oben */
+    margin-bottom: 0px;
+    filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu aendern */
+    object-fit: cover;
+  transition: filter 0.5s;
+  }
+  
+  .imagework:hover {
+    filter: grayscale(0%); /* Filtereffekt entfernen, um das Bild in Farbe zu Ã¤ndern */
+  }
+  
+/* --------------workpage-----------------*/
 
 .containertext {
     display: inline-block; /* Text als Inline-Block-Element behandeln */
     text-align: justify; /* Text im Container zentrieren */
     max-width: 750px; /* Maximale Breite des Containers */
-
     justify-content: center;
-
-    
   }
-
 
 .portfolio {
     text-align: center;
@@ -55,12 +85,12 @@ body {
     margin-bottom: 0px; /* Ändere den unteren Abstand für Überschriften und Absätze auf 10px */
 }
 /* Füge Npx Margin am unteren Rand der Seite hinzu */
+
 body::after {
     content: "";
     display: block;
     height: 100px;
 }
-
 
 .containerhome {
     font-family: "Avenir", sans-serif;
@@ -72,6 +102,7 @@ body::after {
     text-align: center;
     font-size: 18px;
 }
+
 .video-container {
     display: flex;
     justify-content: center;
@@ -112,6 +143,43 @@ a {
     text-decoration: none;
     color: #000;
     font-size: 18px;
-    padding: 10px 20px;
 }
 
+/* --------------contact-----------------*/
+
+.containercontact {
+    display: inline-block; /* Text als Inline-Block-Element behandeln */
+    text-align: justify; /* Text im Container zentrieren */
+    max-width: 750px; /* Maximale Breite des Containers */
+    justify-content: center;
+  }
+  form {
+    width: 400px; /* Breite des Formulars anpassen */
+    margin: 0 auto; /* Zentrieren des Formulars */
+  }
+  
+  label,
+  input,
+  textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input,
+  textarea {
+    width: 100%; /* Breite der Eingabefelder auf 100% setzen */
+    padding: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #000000; /* Hintergrundfarbe des Senden-Buttons anpassen */
+    color: #fff; /* Textfarbe des Senden-Buttons anpassen */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #383838; /* Hintergrundfarbe des Senden-Buttons bei Hover anpassen */
+  }
+  

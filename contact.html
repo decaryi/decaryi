@@ -9,14 +9,27 @@
 
 
 <body>
-  <div class="containertext">
+  <div class="containercontact">
     <h1>Contact</h1>
-    <div class="portfolio">
-      <p>Name: Anton Schmidt</p>
-      <p>Adresse: Manlichstr. 5</p>
-      <p>Stadt: 86154 Augsburg</p>
-      <p>Email: decaryi@web.de</p>
+    <div class="containercontact">
+      <p>Anton Schmidt</p>
+      <p>decaryi@web.de</p>
     </div>
+    <br>
+    <form action="/kontakt" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email" required>
+    
+      <label for="message">Nachricht:</label>
+      <textarea id="message" name="message" required></textarea>
+    
+      <input type="submit" value="Senden">
+    </form>
+    <br>
+    <br>
     <a href="index.html" class="containerhome">Back to Home</a>
   </div>
 </body>
