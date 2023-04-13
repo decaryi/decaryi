@@ -53,7 +53,6 @@ body {
 .portfolio img {
     min-width: 100%; /* Maximale Breite des Containers */
     max-width: 100%; /* Maximale Breite des Containers */
-
     overflow: hidden; /* Überlauf ausblenden, falls das Bild breiter ist als der Container */
     height: auto; /* Höhe automatisch anpassen, um das Bildverhältnis beizubehalten */
     margin-bottom: 20px; /* Optional: Fügen Sie einen unteren Abstand hinzu, um Platz für andere Inhalte zu schaffen */
@@ -84,7 +83,7 @@ body {
     padding-left: 100px; 
     margin-bottom: 0px; /* Ändere den unteren Abstand für Überschriften und Absätze auf 10px */
 }
-/* Füge Npx Margin am unteren Rand der Seite hinzu */
+
 
 body::after {
     content: "";
@@ -107,6 +106,9 @@ body::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 100px; 
+    padding-left: 100px; 
+
 }
 
 .containerhome:hover {
@@ -124,9 +126,18 @@ body::after {
     font-size: 18px;
 }
 
-.logo {
+.logox {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     margin-top: 40px;
 }
+
+.logo {
+    width: 200px; /* Breite des Bildes */
+    height: auto; /* Höhe des Bildes (automatische Anpassung an das Seitenverhältnis) */
+  }
+
 
 ul {
     list-style-type: none;
