@@ -1,7 +1,6 @@
 body {
     font-family: "Avenir", sans-serif;
-    margin: 0;
-    padding: 0;
+
     text-align: center;
 }
 
@@ -127,14 +126,15 @@ body::after {
 }
 
 .logox {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    max-width: 300px;
     margin-top: 40px;
+    text-align: center;
+
 }
 
 .logo {
     width: 200px; /* Breite des Bildes */
+    max-width: 300px;
     height: auto; /* Höhe des Bildes (automatische Anpassung an das Seitenverhältnis) */
   }
 
