@@ -4,6 +4,17 @@ body {
     padding: 0;
 }
 
+.containertext {
+    display: inline-block; /* Text als Inline-Block-Element behandeln */
+    text-align: justify; /* Text im Container zentrieren */
+    max-width: 750px; /* Maximale Breite des Containers */
+
+    justify-content: center;
+
+    
+  }
+
+
 .portfolio {
     text-align: center;
     color: #000000;
@@ -19,17 +30,22 @@ body {
   }  
 
 .portfolio h1 {
+    text-align: justify; 
     font-size: 48px;
     margin-top: 0;
     margin-bottom: 20px; /* Ändere den unteren Abstand für Überschriften und Absätze auf 10px */
+    padding-left: 100px; 
 
 }
 
 .portfolio h2 {
+    text-align: justify; 
     font-size: 24px;
     margin-top: 0;
     margin-bottom: 40px; /* Ändere den unteren Abstand für Überschriften und Absätze auf 10px */
+    padding-left: 100px; 
 }
+
 
 .portfolio p {
     font-size: 18px;
@@ -55,6 +71,11 @@ body::after {
     padding: 10px;
     text-align: center;
     font-size: 18px;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .containerhome:hover {

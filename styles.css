@@ -26,10 +26,11 @@ body, html {
 
   .image {
     width: 100%; /* Bildbreite auf 100% setzen */
-    height: auto; /* Bildhöhe auf auto setzen */
+    height: auto; /* Bildhöhe auf auto setzen */  
+    top: 100; /* Abstand von oben */
+
     margin-bottom: 0px;
     filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu ändern */
-    clip: rect(500px, 500px, 500px, 500px); /* Bild beschneiden - Werte anpassen */
     object-fit: cover;
   }
   
