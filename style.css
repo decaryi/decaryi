@@ -149,37 +149,7 @@ a {
 
 .containercontact {
     display: inline-block; /* Text als Inline-Block-Element behandeln */
-    text-align: justify; /* Text im Container zentrieren */
+    text-align: start; /* Text im Container zentrieren */
     max-width: 750px; /* Maximale Breite des Containers */
     justify-content: center;
   }
-  form {
-    width: 400px; /* Breite des Formulars anpassen */
-    margin: 0 auto; /* Zentrieren des Formulars */
-  }
-  
-  label,
-  input,
-  textarea {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  input,
-  textarea {
-    width: 100%; /* Breite der Eingabefelder auf 100% setzen */
-    padding: 5px;
-  }
-  
-  input[type="submit"] {
-    background-color: #000000; /* Hintergrundfarbe des Senden-Buttons anpassen */
-    color: #fff; /* Textfarbe des Senden-Buttons anpassen */
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #383838; /* Hintergrundfarbe des Senden-Buttons bei Hover anpassen */
-  }
-  
