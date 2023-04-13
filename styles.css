@@ -12,18 +12,25 @@ body, html {
   }
   
   .container {
+    position: relative; /* Positionierung des Containers */
     max-width: 100%;
     margin: 0 auto;
   }
   
-  .image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 0px;
-    object-fit: cover;
-    filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu ändern */
+  .image-container {
+    width: 100%; /* Breite des Bildcontainers anpassen */
+    height: 200px; /* Höhe des Bildcontainers anpassen */
+    position: relative; /* Positionierung des Containers */
+    overflow: hidden; /* Überlauf ausblenden */
+  }
 
+  .image {
+    width: 100%; /* Bildbreite auf 100% setzen */
+    height: auto; /* Bildhöhe auf auto setzen */
+    margin-bottom: 0px;
+    filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu ändern */
+    clip: rect(500px, 500px, 500px, 500px); /* Bild beschneiden - Werte anpassen */
+    object-fit: cover;
   }
   
   .image:hover {
