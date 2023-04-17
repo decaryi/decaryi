@@ -16,10 +16,13 @@ body {
   
   .imagecontainerwork {
     width: 100%; /* Breite des Bildcontainers anpasses */
-    height: 200px; /* HÃ¶he des Bildcontainers anpassen */
+    height: 180px; /* HÃ¶he des Bildcontainers anpassen */
     position: relative;
     top: 0px; left: 0px;
     overflow: hidden; /* Ãœberlauf ausblenden */
+    filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu aendern */
+    transition: filter 0.5s;
+
   }
   
   .imagework {
@@ -27,14 +30,43 @@ body {
     height: auto; /* Bildhoehe auf auto setzen */  
     top: 100; /* Abstand von oben */
     margin-bottom: 0px;
-    filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu aendern */
     object-fit: cover;
-  transition: filter 0.5s;
   }
   
-  .imagework:hover {
+  .imagecontainerwork:hover {
     filter: grayscale(0%); /* Filtereffekt entfernen, um das Bild in Farbe zu Ã¤ndern */
   }
+
+/* Textoverlay-Stil */
+.text-overlay {
+  position: absolute; /* Absolut positionieren, um den Text über das Bild zu legen */
+  top: 10px;
+  left: 0;
+  right: 75%;
+  bottom: 55px;
+  padding: 0 20px; /* Innenabstand des Textoverlays */
+  background-color: rgba(0, 0, 0, 0.); /* Hintergrundfarbe mit 70% Transparenz */
+}
+
+
+/* Linkstil */
+.overlay-link{
+  display: block; /* Link als Blockelement behandeln, um den Text zu überlagern */
+  font-family: "Avenir", sans-serif;
+  font-weight: light;
+  text-align: justify; 
+  font-size: 15px;
+  color: #cdcdcd;
+  margin: 0;
+  padding: 20px;
+  text-decoration: none; /* Unterstreichungen entfernen */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+
+
+
+
   
 /* --------------Arbeiten-----------------*/
 
@@ -50,13 +82,15 @@ body {
     color: #000000;
 }
 
-.portfolio img {
-    min-width: 100%; /* Maximale Breite des Containers */
-    max-width: 100%; /* Maximale Breite des Containers */
-    overflow: hidden; /* Überlauf ausblenden, falls das Bild breiter ist als der Container */
-    height: auto; /* Höhe automatisch anpassen, um das Bildverhältnis beizubehalten */
-    margin-bottom: 20px; /* Optional: Fügen Sie einen unteren Abstand hinzu, um Platz für andere Inhalte zu schaffen */
-  }  
+.portfolio img  {
+    width: 100%; /* Bildbreite auf 100% setzen */
+    height: 350px; /* Bildhoehe auf auto setzen */  
+    top: 100; /* Abstand von oben */
+    margin-bottom: 0px;
+    object-fit: cover;    
+    margin-bottom: 20px; /* Ändere den unteren Abstand für Überschriften und Absätze auf 10px */
+
+  }
 
 .portfolio h1 {
     text-align: justify; 
@@ -165,3 +199,19 @@ a {
     max-width: 750px; /* Maximale Breite des Containers */
     justify-content: center;
   }
+
+
+/*---------------INDEX------------------*/
+
+.logo-containerindex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%; /* Optional: Fügen Sie einen unteren Abstand hinzu, um Platz für andere Inhalte zu schaffen */
+
+  }
+  
+  .logoindex {
+    max-width: 35%;
+  }
+  
