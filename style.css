@@ -81,6 +81,13 @@ body {
     text-align: center;
     color: #000000;
 }
+.portfoliox img{
+  width: 100%; /* Bildbreite auf 100% setzen */
+  height: 500px; /* Bildhoehe auf auto setzen */  
+  top: 0; /* Abstand von oben */
+  margin-bottom: 20px;
+  object-fit: cover;
+}
 
 .portfolio img  {
     width: 100%; /* Bildbreite auf 100% setzen */
@@ -142,7 +149,7 @@ body::after {
     align-items: center;
     padding-right: 100px; 
     padding-left: 100px; 
-
+    margin-bottom: 40px; /* Ändere den unteren Abstand für Überschriften und Absätze auf 10px */
 }
 
 .containerhome:hover {
