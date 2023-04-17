@@ -31,7 +31,7 @@ body {
     height: auto; /* Bildhoehe auf auto setzen */  
     object-fit: cover;
     position: relative;
-    top: -180px; /* Negativen Wert anpassen, um das Bild nach oben zu verschieben */
+    top: -50%; /* Negativen Wert anpassen, um das Bild nach oben zu verschieben */
 
   }
   
