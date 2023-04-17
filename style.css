@@ -22,15 +22,17 @@ body {
     overflow: hidden; /* Ãœberlauf ausblenden */
     filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu aendern */
     transition: filter 0.5s;
+    
 
   }
   
   .imagework {
     width: 100%; /* Bildbreite auf 100% setzen */
     height: auto; /* Bildhoehe auf auto setzen */  
-    top: 100; /* Abstand von oben */
-    margin-bottom: 0px;
     object-fit: cover;
+    position: relative;
+    top: -180px; /* Negativen Wert anpassen, um das Bild nach oben zu verschieben */
+
   }
   
   .imagecontainerwork:hover {
@@ -83,7 +85,7 @@ body {
 }
 .portfoliox img{
   width: 100%; /* Bildbreite auf 100% setzen */
-  height: 10%; /* Bildhoehe auf auto setzen */  
+  height: 50%; /* Bildhoehe auf auto setzen */  
   top: 0; /* Abstand von oben */
   margin-bottom: 20px;
   object-fit: cover;
