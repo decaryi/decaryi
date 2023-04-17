@@ -83,7 +83,7 @@ body {
 }
 .portfoliox img{
   width: 100%; /* Bildbreite auf 100% setzen */
-  height: 500px; /* Bildhoehe auf auto setzen */  
+  height: 10%; /* Bildhoehe auf auto setzen */  
   top: 0; /* Abstand von oben */
   margin-bottom: 20px;
   object-fit: cover;
@@ -91,7 +91,7 @@ body {
 
 .portfolio img  {
     width: 100%; /* Bildbreite auf 100% setzen */
-    height: 350px; /* Bildhoehe auf auto setzen */  
+    height: 85%; /* Bildhoehe auf auto setzen */  
     top: 100; /* Abstand von oben */
     margin-bottom: 0px;
     object-fit: cover;    
