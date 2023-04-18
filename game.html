@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jump and Run</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #gameCanvas {
+            background-color: lightblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .player {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameCanvas"></div>
+    <div class="player"></div>
+
+    <script>
+        const gameCanvas = document.getElementById("gameCanvas");
+        const player = document.querySelector(".player");
+
+        const GRAVITY = 0.5;
+        const JUMP_STRENGTH = 10;
+
+        let isJumping = false;
+        let playerPosition = 0;
+        let playerVelocity = 0;
+
+        function gameLoop() {
+            // Bewege den Spieler nach oben oder unten basierend auf der Geschwindigkeit
+            playerPosition += playerVelocity;
+            player.style.bottom = playerPosition + "px";
+
+            // Überprüfe, ob der Spieler den Boden erreicht hat
+            if (playerPosition <= 0) {
+                // Setze den Spieler auf den Boden und stoppe die Bewegung
+                playerPosition = 0;
+                playerVelocity = 0;
+                isJumping = false;
+            } else {
+                // Aktualisiere die Geschwindigkeit basierend auf der Schwerkraft
+                playerVelocity -= GRAVITY;
+            }
+
+            // Wiederhole die Game Loop
+            requestAnimationFrame(gameLoop);
+        }
+
+        function jump() {
+            if (!isJumping) {
+                // Starte den Sprung nur, wenn der Spieler nicht bereits in der Luft ist
+                playerVelocity = JUMP_STRENGTH;
+                isJumping = true;
+            }
+        }
+
+        // Füge einen Event Listener hinzu, um den Sprung zu starten, wenn die Leertaste gedrückt wird
+        document.addEventListener("keydown", function(event) {
+            if (event.code === "Space") {
+                jump();
+            }
+        });
+
+        // Starte das Spiel
+        gameLoop();
+    </script>
+</body>
+</html>
