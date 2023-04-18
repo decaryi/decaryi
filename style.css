@@ -63,9 +63,11 @@ body {
   text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-@media screen and (max-width: 800px) {
+
+/* Schriftgröße für mobile Geräte mit Hilfe von User-Agent-Strings */
+@media screen and (max-width: 768px), (max-device-width: 768px), (orientation: portrait) {
   .overlay-link {
-    font-size: 25px;
+    font-size: 40px; /* Schriftgröße für mobile Geräte mit maximal 768px Bildschirmbreite oder im Portrait-Modus */
   }
 }
 
