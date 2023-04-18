@@ -22,8 +22,6 @@ body {
     overflow: hidden; /* Ãœberlauf ausblenden */
     filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu aendern */
     transition: filter 0.5s;
-    
-
   }
   
   .imagework {
@@ -65,7 +63,11 @@ body {
   text-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
-
+@media screen {
+  .overlay-link {
+    font-size: 30px;
+  }
+}
 
 
 
