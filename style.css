@@ -65,12 +65,17 @@ body {
 
 
 /* Schriftgröße für mobile Geräte mit Hilfe von User-Agent-Strings */
-@media screen and (max-width: 768px), (max-device-width: 768px), (orientation: portrait) {
+@media screen and (orientation: portrait) {
   .overlay-link {
     font-size: 40px; /* Schriftgröße für mobile Geräte mit maximal 768px Bildschirmbreite oder im Portrait-Modus */
   }
 }
-
+/* Schriftgröße für mobile Geräte mit Hilfe von User-Agent-Strings */
+@media screen and (orientation: landscape) {
+  .overlay-link {
+    font-size: 20px; /* Schriftgröße für mobile Geräte mit maximal 768px Bildschirmbreite oder im Portrait-Modus */
+  }
+}
 
 
   
