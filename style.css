@@ -29,10 +29,18 @@ body {
     height: auto; /* Bildhoehe auf auto setzen */  
     object-fit: cover;
     position: relative;
-    top: -50%; /* Negativen Wert anpassen, um das Bild nach oben zu verschieben */
+    top: -140%;
+    transition: top 0.4s ease-in-out;
 
   }
+
+  @media screen and (max-width: 900px) {
+    .imagework {
+      position: relative;
+      top: -40%;    }
+  }
   
+
   .imagecontainerwork:hover {
     filter: grayscale(0%); /* Filtereffekt entfernen, um das Bild in Farbe zu Ã¤ndern */
   }
@@ -42,7 +50,6 @@ body {
   position: absolute; /* Absolut positionieren, um den Text über das Bild zu legen */
   top: 10px;
   left: 0;
-  right: 75%;
   bottom: 55px;
   padding: 0 20px; /* Innenabstand des Textoverlays */
   background-color: rgba(0, 0, 0, 0.); /* Hintergrundfarbe mit 70% Transparenz */
@@ -56,7 +63,22 @@ body {
   font-weight: light;
   text-align: justify; 
   font-size: 15px;
+  transition: font-size 0.5s ease-in-out;
   color: #cdcdcd;
+  margin: 0;
+  padding: 20px;
+  text-decoration: none; /* Unterstreichungen entfernen */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+/* Linkstil */
+.overlay-linkx{
+  display: block; /* Link als Blockelement behandeln, um den Text zu überlagern */
+  font-family: "Avenir Light", sans-serif;
+  font-weight: light;
+  text-align: justify; 
+  font-size: 15px;
+  transition: font-size 0.5s ease-in-out;
+  color: #f1f1f1;
   margin: 0;
   padding: 20px;
   text-decoration: none; /* Unterstreichungen entfernen */
@@ -73,11 +95,22 @@ body {
 /* Schriftgröße für mobile Geräte mit Hilfe von User-Agent-Strings */
 @media screen and (orientation: landscape) {
   .overlay-link {
-    font-size: 20px; /* Schriftgröße für mobile Geräte mit maximal 768px Bildschirmbreite oder im Portrait-Modus */
+    font-size: 15px; /* Schriftgröße für mobile Geräte mit maximal 768px Bildschirmbreite oder im Portrait-Modus */
   }
 }
 
-
+/* Schriftgröße für mobile Geräte mit Hilfe von User-Agent-Strings */
+@media screen and (orientation: portrait) {
+  .overlay-linkx {
+    font-size: 40px; /* Schriftgröße für mobile Geräte mit maximal 768px Bildschirmbreite oder im Portrait-Modus */
+  }
+}
+/* Schriftgröße für mobile Geräte mit Hilfe von User-Agent-Strings */
+@media screen and (orientation: landscape) {
+  .overlay-linkx {
+    font-size: 15px; /* Schriftgröße für mobile Geräte mit maximal 768px Bildschirmbreite oder im Portrait-Modus */
+  }
+}
   
 /* --------------Arbeiten-----------------*/
 
@@ -233,3 +266,86 @@ a {
     max-width: 35%;
   }
   
+
+
+
+
+
+/*---------------SCETCHBOOK------------------*/
+
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 0px;
+    margin: 0 -5px;
+    padding: 0;
+  }
+  
+  
+  .grid-item {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+      
+  }
+  
+  .grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .grid-item img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    margin: auto;
+      cursor: pointer;
+  
+  }
+  
+  .overlay.active {
+    display: flex;
+  }
+  
+  
+  
+  /* ..............responsive...................*/
+  
+  @media screen and (max-width: 800px) {
+      .grid {
+          grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+  @media screen and (orientation: portrait) {
+      .grid {
+          grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+  @media screen and (orientation: landscape) {
+      .grid {
+          grid-template-columns: repeat(6, 1fr);
+      }
+    }

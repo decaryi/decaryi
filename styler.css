@@ -1,0 +1,22 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px); /* 200px Breite für jeden Container */
+    gap: 0;
+  }
+  
+  .image-grid .image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Quadratischer Container */
+    overflow: hidden;
+  }
+  
+  .image-grid img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Höhe auf auto setzen, um Proportionalität beizubehalten */
+    object-fit: cover;
+  }
+  
