@@ -5,11 +5,14 @@
     <script>
       var userAgent = navigator.userAgent;
       var device;
+      var screenWidth = window.innerWidth;
 
       if (userAgent.indexOf('iPhone') !== -1) {
         device = 'iPhone';
       } else if (userAgent.indexOf('Android') !== -1) {
         device = 'Android-Gerät';
+      } else if (screenWidth >= 768) {
+        device = 'Desktop-Computer';
       } else {
         device = 'unbekannt';
       }
