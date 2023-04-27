@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gerät ermitteln</title>
-    <script>
-      var userAgent = navigator.userAgent;
-      var device;
-      var screenWidth = window.innerWidth;
-
-      if (userAgent.indexOf('iPhone') !== -1) {
-        device = 'iPhone';
-      } else if (userAgent.indexOf('Android') !== -1) {
-        device = 'Android-Gerät';
-      } else if (screenWidth >= 768) {
-        device = 'Desktop-Computer';
-      } else {
-        device = 'unbekannt';
+    <title>Padding ändern mit CSS</title>
+    <style>
+      #content {
+        padding-right: 100px;
+        padding-left: 100px;
       }
 
-      window.onload = function() {
-        var deviceText = document.getElementById('device');
-        deviceText.textContent = 'Du verwendest ein ' + device + '.';
-      };
-    </script>
+      @media (max-width: 767px) {
+        #content {
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p id="device"></p>
+    <div id="content">
+      <h1>Willkommen</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod tortor vel enim bibendum, ac fermentum velit mollis.</p>
+    </div>
   </body>
 </html>
