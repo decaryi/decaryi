@@ -21,7 +21,7 @@ body {
     top: 0px; left: 0px;
     overflow: hidden; /* Ãœberlauf ausblenden */
     filter: grayscale(100%); /* Filtereffekt entfernen, um das Bild in Farbe zu aendern */
-    transition: filter 0.5s;
+    transition: filter 0.5s ease-out, transform 0.3s ease-in-out;
   }
   
   .imagework {
@@ -43,6 +43,7 @@ body {
 
   .imagecontainerwork:hover {
     filter: grayscale(0%); /* Filtereffekt entfernen, um das Bild in Farbe zu Ã¤ndern */
+    transform: scale(1.01);
   }
 
 /* Textoverlay-Stil */
@@ -290,16 +291,19 @@ a {
       
   }
   
+
   .grid-item img {
     display: block;
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease-out;
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-out, transform 0.3s ease-in-out;
   }
   
   .grid-item img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     cursor: pointer;
+    filter: grayscale(0%); /* Filtereffekt entfernen, um das Bild in Farbe zu Ã¤ndern */
   }
   
   .overlay {
